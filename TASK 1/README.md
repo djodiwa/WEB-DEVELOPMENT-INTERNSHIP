@@ -6,9 +6,9 @@ As part of my internship, I completed Task 1 by developing a simple responsive l
 This README documents the development process, tools utilized, usage instructions, and key learnings, reflecting my approach as a student interning in web development.
 
 ## Screenshots
-Below is a screenshot demonstrating the landing page on desktop view. (To add your own: Replace the placeholder image path with an actual screenshot file in the same directory.)
+Below is a screenshot demonstrating the landing page on desktop view.
 
-![](.resource/screenshot.png)
+![Screenshot](resource/screenshot.png)
 
 ## Features
 - **Header**: Includes a logo and navigation links (Home, About, Contact) using Flexbox for horizontal alignment.
