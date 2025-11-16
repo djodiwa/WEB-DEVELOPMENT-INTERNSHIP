@@ -6,9 +6,9 @@ As part of my JavaScript internship, I completed Task 2 by developing a dynamic 
 This README documents the development process, tools utilized, usage instructions, and key learnings, reflecting my approach as a student interning in web development.
 
 ## Screenshots
-Below is a screenshot demonstrating the to-do list app in action. (To add your own: Replace the placeholder image path with an actual screenshot file in the same directory.)
+Below is a screenshot demonstrating the to-do list app in action.
 
-![To-Do List App](screenshot-todo.png)
+![Screenshot](resource/screenshot.png)
 
 ## Features
 - **Add Tasks**: Enter text in the input field and click "Add Task" (or press Enter) to dynamically append a new list item.
