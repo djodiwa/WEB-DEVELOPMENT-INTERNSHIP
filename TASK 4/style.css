@@ -1,0 +1,218 @@
+/* style.css - Updated for Mobile-First Responsiveness */
+
+/* Base Styles (Mobile-First: Assume small screens by default) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    /* NEW: Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* CHANGE: Smaller default padding for mobile */
+    background-color: hsl(46, 100%, 71%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 2.0rem; /* CHANGE: Smaller base font for mobile */
+    font-weight: bold;
+    color: #2e3945;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    /* NEW: Stack nav vertically by default for mobile */
+    flex-direction: column;
+}
+
+nav li {
+    margin: 0rem 0; /* CHANGE: Smaller margins for stacked nav */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem; /* NEW: Add padding for touch-friendly taps on mobile */
+}
+
+nav a:hover {
+    color: #ffa200;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* CHANGE: Shorter for mobile (was 70vh) */
+    background-color: #ffff9e;
+    text-align: center;
+    padding: 1rem; /* CHANGE: Tighter padding */
+}
+
+.hero-content h1 {
+    font-size: 1.8rem; /* CHANGE: Smaller base for mobile (was 3rem) */
+    margin-bottom: 0.5rem; /* CHANGE: Less space */
+    color: #c13a3a;
+}
+
+.hero-content p {
+    font-size: 1rem; /* CHANGE: Base size for mobile */
+    margin-bottom: 1.5rem; /* CHANGE: Less space */
+    max-width: 100%; /* CHANGE: Full width on small screens (was 600px) */
+}
+
+.cta-button {
+    background-color: #ffc619;
+    color: rgb(255, 81, 0);
+    padding: 0.8rem 1.5rem; /* CHANGE: Smaller for mobile */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* CHANGE: Base size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #65270b;
+}
+
+footer {
+    background-color: #333;
+    color: #ffff9e;
+    text-align: center;
+    padding: 1rem; /* CHANGE: Smaller default */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* CHANGE: Full width on mobile (was 1200px) */
+    margin: 0 auto;
+    /* NEW: Stack by default for mobile */
+    flex-direction: column;
+    gap: 0.5rem; /* NEW: Space between stacked items */
+}
+
+.social-links a {
+    color: #ffff9e;
+    margin-left: 0.5rem; /* CHANGE: Smaller margins */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #0033;
+}
+
+/* NEW: Ensure images scale within containers (hint #8) - Applies to any future images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Query for Tablets/Small Screens (max-width: 768px) - Builds on your existing one */
+@media (max-width: 768px) {
+    /* CHANGE: Your original had column stacking here, but we moved base to mobile-first */
+    header {
+        padding: 0.75rem 1rem; /* FINE-TUNE: Slightly more space than phone */
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* FINE-TUNE: Between mobile and desktop */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .footer-content {
+        gap: 1rem; /* FINE-TUNE: More space on tablet */
+    }
+}
+
+/* Media Query for Larger Screens (Desktop) - Override mobile base styles */
+@media (min-width: 769px) {
+    /* NEW: Desktop overrides for wider layouts */
+    header {
+        flex-direction: row; /* CHANGE: Unstack nav */
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-direction: row; /* Unstack nav */
+    }
+
+    nav li {
+        margin-left: 2rem; /* Horizontal spacing */
+        margin-top: 0; /* Reset vertical */
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 600px; /* Back to original */
+        margin-bottom: 2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: row; /* Unstack footer */
+        max-width: 1200px;
+        gap: 0; /* Reset gap */
+    }
+
+    .social-links a {
+        margin-left: 1rem; /* Original horizontal spacing */
+    }
+}
+
+/* Your original 480px query - Kept but enhanced for overflow fix */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem; /* Tighter for tiny screens */
+    }
+
+    .hero {
+        padding: 0.5rem; /* Minimize padding to fit content */
+    }
+
+    .cta-button {
+        width: 100%; /* NEW: Full-width button for easy tapping */
+        padding: 0.75rem;
+    }
+
+    /* NEW: Extra overflow fix for very small screens */
+    body {
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+}
