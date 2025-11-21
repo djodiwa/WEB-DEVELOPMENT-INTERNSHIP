@@ -55,3 +55,8 @@
 - Regular expressions (regex) for email validation
 - Providing clear user feedback (errors + success states)
 - Separation of concerns (HTML structure → CSS styling → JS logic)
+
+## Files Included
+- `index.html`
+- `style.css` 
+- `script.js`
