@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #92ffc3;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.container {
+  background: rgb(136, 255, 221);
+  padding: 25px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+input, textarea, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #97f6c1;
+  border-radius: 5px;
+}
+
+.error {
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  color: rgb(85, 0, 255);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
